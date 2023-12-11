@@ -1,4 +1,4 @@
-@import './base.css';
+@import 'base';
 
 #app {
   max-width: 1280px;
@@ -33,3 +33,9 @@ a,
     padding: 0 2rem;
   }
 }
+
+
+
+@use '../../node_modules/vuetify' with (
+  $variable: false,
+);
