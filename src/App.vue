@@ -1,47 +1,34 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <v-app>
+        <v-app-bar :elevation="10">
+            <v-avatar>
+                <v-icon icon="mdi-account"></v-icon>
+            </v-avatar>
+            <v-app-bar-nav-icon @click=""></v-app-bar-nav-icon>
+            <v-app-bar-title>Application</v-app-bar-title>
+        </v-app-bar>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+        <v-main class="bg-grey-lighten-3">
+            <v-container>
+                <v-card
+                    title="This is a title"
+                    subtitle="This is a subtitle"
+                    text="This is content"
+                ></v-card>
+            </v-container>
+        </v-main>
+        <v-spacer></v-spacer>
+        <v-footer app> 2023&copy;</v-footer>
+    </v-app>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+
+<script setup lang="ts">
+
+</script>
+
+<script lang="ts">
+export default {
+    data: () => ({ drawer: null })
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+</script>
